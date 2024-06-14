@@ -10,122 +10,122 @@
   <material name="plastic_glossy_black">
     <color rgba="0.09803921568627451 0.09803921568627451 0.09803921568627451 1.0"/>
   </material>
-  <transmission name="Revolute 11_tran">
+  <transmission name="KFE3_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 11">
+    <joint name="KFE3">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 11_actr">
+    <actuator name="KFE3_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 12_tran">
+  <transmission name="HFE3_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 12">
+    <joint name="HFE3">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 12_actr">
+    <actuator name="HFE3_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 15_tran">
+  <transmission name="HAA3_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 15">
+    <joint name="HAA3">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 15_actr">
+    <actuator name="HAA3_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 16_tran">
+  <transmission name="HAA4_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 16">
+    <joint name="HAA4">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 16_actr">
+    <actuator name="HAA4_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 17_tran">
+  <transmission name="HFE4_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 17">
+    <joint name="HFE4">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 17_actr">
+    <actuator name="HFE4_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 18_tran">
+  <transmission name="KFE4_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 18">
+    <joint name="KFE4">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 18_actr">
+    <actuator name="KFE4_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 20_tran">
+  <transmission name="HAA1_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 20">
+    <joint name="HAA1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 20_actr">
+    <actuator name="HAA1_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 21_tran">
+  <transmission name="HAA2_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 21">
+    <joint name="HAA2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 21_actr">
+    <actuator name="HAA2_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 22_tran">
+  <transmission name="HFE1_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 22">
+    <joint name="HFE1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 22_actr">
+    <actuator name="HFE1_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 23_tran">
+  <transmission name="HFE2_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 23">
+    <joint name="HFE2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 23_actr">
+    <actuator name="HFE2_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 24_tran">
+  <transmission name="KFE2_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 24">
+    <joint name="KFE2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 24_actr">
+    <actuator name="KFE2_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="Revolute 25_tran">
+  <transmission name="KFE1_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="Revolute 25">
+    <joint name="KFE1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="Revolute 25_actr">
+    <actuator name="KFE1_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
@@ -390,73 +390,73 @@
       </geometry>
     </collision>
   </link>
-  <joint name="Revolute 11" type="continuous">
+  <joint name="KFE3" type="continuous">
     <origin rpy="0 0 0" xyz="-0.17587 -0.0445 0.0"/>
     <parent link="ACTUATOR_V2.1__KNEE__v10_1"/>
     <child link="ANKLE_v4_1"/>
     <axis xyz="0.0 -1.0 0.0"/>
   </joint>
-  <joint name="Revolute 12" type="continuous">
+  <joint name="HFE3" type="continuous">
     <origin rpy="0 0 0" xyz="-0.077906 -0.025 0.0"/>
     <parent link="Hip_1"/>
     <child link="ACTUATOR_V2.1__KNEE__v10_1"/>
     <axis xyz="0.0 1.0 -0.0"/>
   </joint>
-  <joint name="Revolute 15" type="continuous">
+  <joint name="HAA3" type="continuous">
     <origin rpy="0 0 0" xyz="0.255776 0.0 0.025"/>
     <parent link="base_link"/>
     <child link="Hip_1"/>
     <axis xyz="-1.0 0.0 0.0"/>
   </joint>
-  <joint name="Revolute 16" type="continuous">
+  <joint name="HAA4" type="continuous">
     <origin rpy="0 0 0" xyz="0.255776 0.243608 0.025"/>
     <parent link="base_link"/>
     <child link="Hip_2"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="Revolute 17" type="continuous">
+  <joint name="HFE4" type="continuous">
     <origin rpy="0 0 0" xyz="-0.077906 0.025 0.0"/>
     <parent link="Hip_2"/>
     <child link="ACTUATOR_V2.1__KNEE__v10_2"/>
     <axis xyz="0.0 -1.0 0.0"/>
   </joint>
-  <joint name="Revolute 18" type="continuous">
+  <joint name="KFE4" type="continuous">
     <origin rpy="0 0 0" xyz="-0.17587 0.0445 0.0"/>
     <parent link="ACTUATOR_V2.1__KNEE__v10_2"/>
     <child link="ANKLE_v4_2"/>
     <axis xyz="0.0 1.0 -0.0"/>
   </joint>
-  <joint name="Revolute 20" type="continuous">
+  <joint name="HAA1" type="continuous">
     <origin rpy="0 0 0" xyz="-0.389589 0.0 0.025"/>
     <parent link="base_link"/>
     <child link="Hip_3"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="Revolute 21" type="continuous">
+  <joint name="HAA2" type="continuous">
     <origin rpy="0 0 0" xyz="-0.389589 0.243608 0.025"/>
     <parent link="base_link"/>
     <child link="Hip_4"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="Revolute 22" type="continuous">
+  <joint name="HFE1" type="continuous">
     <origin rpy="0 0 0" xyz="0.077906 -0.025 0.0"/>
     <parent link="Hip_3"/>
     <child link="ACTUATOR_V2.1__KNEE__v10_3"/>
     <axis xyz="-0.0 1.0 -0.0"/>
   </joint>
-  <joint name="Revolute 23" type="continuous">
+  <joint name="HFE2" type="continuous">
     <origin rpy="0 0 0" xyz="0.077906 0.025 0.0"/>
     <parent link="Hip_4"/>
     <child link="ACTUATOR_V2.1__KNEE__v10_4"/>
     <axis xyz="-0.0 -1.0 -0.0"/>
   </joint>
-  <joint name="Revolute 24" type="continuous">
+  <joint name="KFE2" type="continuous">
     <origin rpy="0 0 0" xyz="0.17587 0.0445 0.0"/>
     <parent link="ACTUATOR_V2.1__KNEE__v10_4"/>
     <child link="ANKLE_v4_3"/>
     <axis xyz="-0.0 1.0 0.0"/>
   </joint>
-  <joint name="Revolute 25" type="continuous">
+  <joint name="KFE1" type="continuous">
     <origin rpy="0 0 0" xyz="0.17587 -0.0445 0.0"/>
     <parent link="ACTUATOR_V2.1__KNEE__v10_3"/>
     <child link="ANKLE_v4_4"/>
