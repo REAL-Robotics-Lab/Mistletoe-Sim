@@ -1,0 +1,4 @@
+source;share/mistletoe_description/local_setup.bash
+source;share/mistletoe_description/local_setup.dsv
+source;share/mistletoe_description/local_setup.sh
+source;share/mistletoe_description/local_setup.zsh
