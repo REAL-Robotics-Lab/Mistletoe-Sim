@@ -1,0 +1,471 @@
+<?xml version="1.0" ?>
+<robot name="mistletoe-sim" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mistletoe-sim_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mistletoe-sim_description)/urdf/mistletoe-sim.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0742111235071501 0.12107196072138687 0.02382596227206724" rpy="0 0 0"/>
+    <mass value="4.0282061595327185"/>
+    <inertia ixx="0.013417" iyy="0.184869" izz="0.19255" ixy="-0.00018" iyz="1.6e-05" ixz="0.00116"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_1_ANKLE">
+  <inertial>
+    <origin xyz="-3.940693174275811e-07 0.02214768809098814 -0.06893004017418905" rpy="0 0 0"/>
+    <mass value="0.0707595437253254"/>
+    <inertia ixx="0.000194" iyy="0.000193" izz="8e-06" ixy="0.0" iyz="5e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 0.071 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 0.071 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_1_KNEE">
+  <inertial>
+    <origin xyz="6.506335524375517e-06 -0.06075650205456666 -0.053095505532471214" rpy="0 0 0"/>
+    <mass value="0.6687419456686833"/>
+    <inertia ixx="0.004059" iyy="0.003897" izz="0.000581" ixy="-0.0" iyz="-0.000492" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 0.026 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 0.026 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_1_HIP">
+  <inertial>
+    <origin xyz="-0.1675167715088861 0.008238257074781409 -5.1741353007672686e-09" rpy="0 0 0"/>
+    <mass value="0.5600707780907046"/>
+    <inertia ixx="0.000428" iyy="0.004847" izz="0.004917" ixy="0.000319" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.255776 0.001 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.255776 0.001 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_2_HIP">
+  <inertial>
+    <origin xyz="-0.1675167715088861 -0.008238257074783623 5.174126550822056e-09" rpy="0 0 0"/>
+    <mass value="0.5600707780907046"/>
+    <inertia ixx="0.000428" iyy="0.004847" izz="0.004917" ixy="-0.000319" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.255776 -0.242608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.255776 -0.242608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_2_KNEE">
+  <inertial>
+    <origin xyz="-7.306335524759344e-06 0.06075650205456229 -0.05309550553247526" rpy="0 0 0"/>
+    <mass value="0.6687419456686833"/>
+    <inertia ixx="0.004059" iyy="0.003897" izz="0.000581" ixy="-0.0" iyz="0.000492" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 -0.267608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 -0.267608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_2_ANKLE">
+  <inertial>
+    <origin xyz="-4.0593068142968924e-07 -0.02214768809099732 -0.06893004017419127" rpy="0 0 0"/>
+    <mass value="0.0707595437253254"/>
+    <inertia ixx="0.000194" iyy="0.000193" izz="8e-06" ixy="0.0" iyz="-5e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 -0.312608 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 -0.312608 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_3_HIP">
+  <inertial>
+    <origin xyz="0.16751677150888714 0.00823825707478041 5.174135415259018e-09" rpy="0 0 0"/>
+    <mass value="0.5600707780907046"/>
+    <inertia ixx="0.000428" iyy="0.004847" izz="0.004917" ixy="-0.000319" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.389589 0.001 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.389589 0.001 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_4_HIP">
+  <inertial>
+    <origin xyz="0.16751677150888733 -0.008238257074784622 -5.174131970098195e-09" rpy="0 0 0"/>
+    <mass value="0.5600707780907046"/>
+    <inertia ixx="0.000428" iyy="0.004847" izz="0.004917" ixy="0.000319" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.389589 -0.242608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.389589 -0.242608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_HIP_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_3_KNEE">
+  <inertial>
+    <origin xyz="7.306335524315255e-06 -0.060756502054566924 -0.05309550553247254" rpy="0 0 0"/>
+    <mass value="0.6687419456686833"/>
+    <inertia ixx="0.004059" iyy="0.003897" izz="0.000581" ixy="-0.0" iyz="-0.000492" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 0.026 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 0.026 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_4_KNEE">
+  <inertial>
+    <origin xyz="-6.50633552473634e-06 0.06075650205456207 -0.05309550553247643" rpy="0 0 0"/>
+    <mass value="0.6687419456686833"/>
+    <inertia ixx="0.004059" iyy="0.003897" izz="0.000581" ixy="-0.0" iyz="0.000492" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 -0.267608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 -0.267608 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_KNEE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_3_ANKLE">
+  <inertial>
+    <origin xyz="4.059306822901121e-07 0.022147688090987667 -0.06893004017418985" rpy="0 0 0"/>
+    <mass value="0.0707595437253254"/>
+    <inertia ixx="0.000194" iyy="0.000193" izz="8e-06" ixy="0.0" iyz="5e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 0.071 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 0.071 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_4_ANKLE">
+  <inertial>
+    <origin xyz="3.9406931612306906e-07 -0.02214768809099793 -0.06893004017419307" rpy="0 0 0"/>
+    <mass value="0.0707595437253254"/>
+    <inertia ixx="0.000194" iyy="0.000193" izz="8e-06" ixy="0.0" iyz="-5e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 -0.312608 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 -0.312608 0.15087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_ANKLE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_4_FOOT">
+  <inertial>
+    <origin xyz="3.9999999867923464e-07 -2.609024107869118e-15 3.999999908521623e-07" rpy="0 0 0"/>
+    <mass value="0.009189158511750147"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 -0.289408 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 -0.289408 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_4_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_3_FOOT">
+  <inertial>
+    <origin xyz="3.9999999978945766e-07 -9.429956815409923e-15 3.9999999390527563e-07" rpy="0 0 0"/>
+    <mass value="0.009189158511750147"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.311683 0.0478 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.311683 0.0478 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_3_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_1_FOOT">
+  <inertial>
+    <origin xyz="-3.9999999992823554e-07 -9.18709552877317e-15 3.999999956261213e-07" rpy="0 0 0"/>
+    <mass value="0.009189158511750147"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 0.0478 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 0.0478 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_1_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEG_2_FOOT">
+  <inertial>
+    <origin xyz="-3.99999998262901e-07 -2.275957200481571e-15 3.9999999273954145e-07" rpy="0 0 0"/>
+    <mass value="0.009189158511750147"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17787 -0.289408 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17787 -0.289408 0.310722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mistletoe-sim_description/meshes/LEG_2_FOOT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="LEG_1_KFE" type="continuous">
+  <origin xyz="0.0 -0.045 -0.17587" rpy="0 0 0"/>
+  <parent link="LEG_1_KNEE"/>
+  <child link="LEG_1_ANKLE"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="LEG_1_HFE" type="continuous">
+  <origin xyz="-0.077906 -0.025 0.0" rpy="0 0 0"/>
+  <parent link="LEG_1_HIP"/>
+  <child link="LEG_1_KNEE"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="LEG_1_HAA" type="continuous">
+  <origin xyz="0.255776 -0.001 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="LEG_1_HIP"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="LEG_2_HAA" type="continuous">
+  <origin xyz="0.255776 0.242608 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="LEG_2_HIP"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="LEG_2_HFE" type="continuous">
+  <origin xyz="-0.077906 0.025 0.0" rpy="0 0 0"/>
+  <parent link="LEG_2_HIP"/>
+  <child link="LEG_2_KNEE"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="LEG_2_KFE" type="continuous">
+  <origin xyz="0.0 0.045 -0.17587" rpy="0 0 0"/>
+  <parent link="LEG_2_KNEE"/>
+  <child link="LEG_2_ANKLE"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="LEG_3_HAA" type="continuous">
+  <origin xyz="-0.389589 -0.001 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="LEG_3_HIP"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="LEG_4_HAA" type="continuous">
+  <origin xyz="-0.389589 0.242608 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="LEG_4_HIP"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="LEG_3_HFE" type="continuous">
+  <origin xyz="0.077906 -0.025 0.0" rpy="0 0 0"/>
+  <parent link="LEG_3_HIP"/>
+  <child link="LEG_3_KNEE"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="LEG_4_HFE" type="continuous">
+  <origin xyz="0.077906 0.025 0.0" rpy="0 0 0"/>
+  <parent link="LEG_4_HIP"/>
+  <child link="LEG_4_KNEE"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="LEG_3_KFE" type="continuous">
+  <origin xyz="0.0 -0.045 -0.17587" rpy="0 0 0"/>
+  <parent link="LEG_3_KNEE"/>
+  <child link="LEG_3_ANKLE"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="LEG_4_KFE" type="continuous">
+  <origin xyz="0.0 0.045 -0.17587" rpy="0 0 0"/>
+  <parent link="LEG_4_KNEE"/>
+  <child link="LEG_4_ANKLE"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="0.0 -0.0232 -0.159852" rpy="0 0 0"/>
+  <parent link="LEG_4_ANKLE"/>
+  <child link="LEG_4_FOOT"/>
+</joint>
+
+<joint name="Rigid 34" type="fixed">
+  <origin xyz="0.0 0.0232 -0.159852" rpy="0 0 0"/>
+  <parent link="LEG_3_ANKLE"/>
+  <child link="LEG_3_FOOT"/>
+</joint>
+
+<joint name="Rigid 35" type="fixed">
+  <origin xyz="0.0 0.0232 -0.159852" rpy="0 0 0"/>
+  <parent link="LEG_1_ANKLE"/>
+  <child link="LEG_1_FOOT"/>
+</joint>
+
+<joint name="Rigid 36" type="fixed">
+  <origin xyz="0.0 -0.0232 -0.159852" rpy="0 0 0"/>
+  <parent link="LEG_2_ANKLE"/>
+  <child link="LEG_2_FOOT"/>
+</joint>
+
+</robot>
