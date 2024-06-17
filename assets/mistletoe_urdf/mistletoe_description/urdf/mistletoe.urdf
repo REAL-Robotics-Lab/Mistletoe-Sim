@@ -10,127 +10,127 @@
   <material name="plastic_glossy_black">
     <color rgba="0.09803921568627451 0.09803921568627451 0.09803921568627451 1.0"/>
   </material>
-  <transmission name="KFE3_tran">
+  <transmission name="LEG_3_KFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="KFE3">
+    <joint name="LEG_3_KFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="KFE3_actr">
+    <actuator name="LEG_3_KFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HFE3_tran">
+  <transmission name="LEG_3_HFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HFE3">
+    <joint name="LEG_3_HFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HFE3_actr">
+    <actuator name="LEG_3_HFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HAA3_tran">
+  <transmission name="LEG_3_HAA_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HAA3">
+    <joint name="LEG_3_HAA">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HAA3_actr">
+    <actuator name="LEG_3_HAA_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HAA4_tran">
+  <transmission name="LEG_4_HAA_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HAA4">
+    <joint name="LEG_4_HAA">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HAA4_actr">
+    <actuator name="LEG_4_HAA_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HFE4_tran">
+  <transmission name="LEG_4_HFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HFE4">
+    <joint name="LEG_4_HFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HFE4_actr">
+    <actuator name="LEG_4_HFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="KFE4_tran">
+  <transmission name="LEG_4_KFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="KFE4">
+    <joint name="LEG_4_KFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="KFE4_actr">
+    <actuator name="LEG_4_KFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HAA1_tran">
+  <transmission name="LEG_1_HAA_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HAA1">
+    <joint name="LEG_1_HAA">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HAA1_actr">
+    <actuator name="LEG_1_HAA_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HAA2_tran">
+  <transmission name="LEG_2_HAA_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HAA2">
+    <joint name="LEG_2_HAA">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HAA2_actr">
+    <actuator name="LEG_2_HAA_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HFE1_tran">
+  <transmission name="LEG_1_HFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HFE1">
+    <joint name="LEG_1_HFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HFE1_actr">
+    <actuator name="LEG_1_HFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="HFE2_tran">
+  <transmission name="LEG_2_HFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="HFE2">
+    <joint name="LEG_2_HFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="HFE2_actr">
+    <actuator name="LEG_2_HFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="KFE2_tran">
+  <transmission name="LEG_2_KFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="KFE2">
+    <joint name="LEG_2_KFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="KFE2_actr">
+    <actuator name="LEG_2_KFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="KFE1_tran">
+  <transmission name="LEG_1_KFE_tran">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="KFE1">
+    <joint name="LEG_1_KFE">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="KFE1_actr">
+    <actuator name="LEG_1_KFE_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <link name="base_link">
+  <link name="base">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.06657859086794671 0.12180227598730436 0.027661254547312438"/>
       <mass value="2.781822888066483"/>
@@ -150,7 +150,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ANKLE_v4_1">
+  <link name="LEG_1_FOOT">
     <inertial>
       <origin rpy="0 0 0" xyz="0.05969551525022496 0.02164768809099367 -0.034465214950969866"/>
       <mass value="0.0707595437253254"/>
@@ -170,7 +170,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ACTUATOR_V2.1__KNEE__v10_1">
+  <link name="LEG_1_THIGH">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.053095905532469054 -0.06025650205456463 -6.906335524088647e-06"/>
       <mass value="0.6687419456686833"/>
@@ -230,7 +230,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ACTUATOR_V2.1__KNEE__v10_2">
+  <link name="LEG_2_THIGH">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05309590553246825 0.0602565020545649 6.906335525407037e-06"/>
       <mass value="0.6687419456686833"/>
@@ -250,7 +250,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ANKLE_v4_2">
+  <link name="LEG_2_FOOT">
     <inertial>
       <origin rpy="0 0 0" xyz="0.059695509319545356 -0.021647688090992268 -0.034465225223213346"/>
       <mass value="0.0707595437253254"/>
@@ -310,7 +310,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ACTUATOR_V2.1__KNEE__v10_3">
+  <link name="LEG_3_THIGH">
     <inertial>
       <origin rpy="0 0 0" xyz="0.05309590553246918 -0.06025650205456722 6.906335536540492e-06"/>
       <mass value="0.6687419456686833"/>
@@ -330,7 +330,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ACTUATOR_V2.1__KNEE__v10_4">
+  <link name="LEG_4_THIGH">
     <inertial>
       <origin rpy="0 0 0" xyz="0.05309590553246907 0.06025650205456318 -6.906335511872724e-06"/>
       <mass value="0.6687419456686833"/>
@@ -350,7 +350,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ANKLE_v4_3">
+  <link name="LEG_3_FOOT">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.059695515250226594 -0.021647688090993877 -0.034465214950958015"/>
       <mass value="0.0707595437253254"/>
@@ -370,7 +370,7 @@
       </geometry>
     </collision>
   </link>
-  <link name="ANKLE_v4_4">
+  <link name="LEG_4_FOOT">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05969550931954576 0.02164768809099009 -0.03446522522320032"/>
       <mass value="0.0707595437253254"/>
@@ -390,76 +390,76 @@
       </geometry>
     </collision>
   </link>
-  <joint name="KFE3" type="continuous">
+  <joint name="LEG_3_KFE" type="continuous">
     <origin rpy="0 0 0" xyz="-0.17587 -0.0445 0.0"/>
-    <parent link="ACTUATOR_V2.1__KNEE__v10_1"/>
-    <child link="ANKLE_v4_1"/>
+    <parent link="LEG_1_THIGH"/>
+    <child link="LEG_1_FOOT"/>
     <axis xyz="0.0 -1.0 0.0"/>
   </joint>
-  <joint name="HFE3" type="continuous">
+  <joint name="LEG_3_HFE" type="continuous">
     <origin rpy="0 0 0" xyz="-0.077906 -0.025 0.0"/>
     <parent link="Hip_1"/>
-    <child link="ACTUATOR_V2.1__KNEE__v10_1"/>
+    <child link="LEG_1_THIGH"/>
     <axis xyz="0.0 1.0 -0.0"/>
   </joint>
-  <joint name="HAA3" type="continuous">
+  <joint name="LEG_3_HAA" type="continuous">
     <origin rpy="0 0 0" xyz="0.255776 0.0 0.025"/>
-    <parent link="base_link"/>
+    <parent link="base"/>
     <child link="Hip_1"/>
     <axis xyz="-1.0 0.0 0.0"/>
   </joint>
-  <joint name="HAA4" type="continuous">
+  <joint name="LEG_4_HAA" type="continuous">
     <origin rpy="0 0 0" xyz="0.255776 0.243608 0.025"/>
-    <parent link="base_link"/>
+    <parent link="base"/>
     <child link="Hip_2"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="HFE4" type="continuous">
+  <joint name="LEG_4_HFE" type="continuous">
     <origin rpy="0 0 0" xyz="-0.077906 0.025 0.0"/>
     <parent link="Hip_2"/>
-    <child link="ACTUATOR_V2.1__KNEE__v10_2"/>
+    <child link="LEG_2_THIGH"/>
     <axis xyz="0.0 -1.0 0.0"/>
   </joint>
-  <joint name="KFE4" type="continuous">
+  <joint name="LEG_4_KFE" type="continuous">
     <origin rpy="0 0 0" xyz="-0.17587 0.0445 0.0"/>
-    <parent link="ACTUATOR_V2.1__KNEE__v10_2"/>
-    <child link="ANKLE_v4_2"/>
+    <parent link="LEG_2_THIGH"/>
+    <child link="LEG_2_FOOT"/>
     <axis xyz="0.0 1.0 -0.0"/>
   </joint>
-  <joint name="HAA1" type="continuous">
+  <joint name="LEG_1_HAA" type="continuous">
     <origin rpy="0 0 0" xyz="-0.389589 0.0 0.025"/>
-    <parent link="base_link"/>
+    <parent link="base"/>
     <child link="Hip_3"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="HAA2" type="continuous">
+  <joint name="LEG_2_HAA" type="continuous">
     <origin rpy="0 0 0" xyz="-0.389589 0.243608 0.025"/>
-    <parent link="base_link"/>
+    <parent link="base"/>
     <child link="Hip_4"/>
     <axis xyz="1.0 0.0 -0.0"/>
   </joint>
-  <joint name="HFE1" type="continuous">
+  <joint name="LEG_1_HFE" type="continuous">
     <origin rpy="0 0 0" xyz="0.077906 -0.025 0.0"/>
     <parent link="Hip_3"/>
-    <child link="ACTUATOR_V2.1__KNEE__v10_3"/>
+    <child link="LEG_3_THIGH"/>
     <axis xyz="-0.0 1.0 -0.0"/>
   </joint>
-  <joint name="HFE2" type="continuous">
+  <joint name="LEG_2_HFE" type="continuous">
     <origin rpy="0 0 0" xyz="0.077906 0.025 0.0"/>
     <parent link="Hip_4"/>
-    <child link="ACTUATOR_V2.1__KNEE__v10_4"/>
+    <child link="LEG_4_THIGH"/>
     <axis xyz="-0.0 -1.0 -0.0"/>
   </joint>
-  <joint name="KFE2" type="continuous">
+  <joint name="LEG_2_KFE" type="continuous">
     <origin rpy="0 0 0" xyz="0.17587 0.0445 0.0"/>
-    <parent link="ACTUATOR_V2.1__KNEE__v10_4"/>
-    <child link="ANKLE_v4_3"/>
+    <parent link="LEG_4_THIGH"/>
+    <child link="LEG_3_FOOT"/>
     <axis xyz="-0.0 1.0 0.0"/>
   </joint>
-  <joint name="KFE1" type="continuous">
+  <joint name="LEG_1_KFE" type="continuous">
     <origin rpy="0 0 0" xyz="0.17587 -0.0445 0.0"/>
-    <parent link="ACTUATOR_V2.1__KNEE__v10_3"/>
-    <child link="ANKLE_v4_4"/>
+    <parent link="LEG_3_THIGH"/>
+    <child link="LEG_4_FOOT"/>
     <axis xyz="-0.0 -1.0 0.0"/>
   </joint>
 </robot>
