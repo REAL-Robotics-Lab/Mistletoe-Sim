@@ -1,34 +1,31 @@
 import omni.isaac.lab.sim as sim_utils
-from omni.isaac.lab.actuators import DCMotorCfg
+from omni.isaac.lab.actuators import DCMotorCfg,ImplicitActuatorCfg
 from omni.isaac.lab.assets.articulation import ArticulationCfg
 import os
-
+from omni.isaac.lab.utils.assets import ISAACLAB_NUCLEUS_DIR
 dirname, filename = os.path.split(os.path.abspath(__file__))
 
 # Actuator Configs 
 
-HAA_ACTUATOR_CFG = DCMotorCfg(
+HAA_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HAA"],
-    saturation_effort=24,
     effort_limit=24,
     velocity_limit=7.5,
     stiffness={".*": 40.0},
     damping={".*": 5.0},
 )
 
-KFE_ACTUATOR_CFG = DCMotorCfg(
+KFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*KFE"],
-    saturation_effort=9,
-    effort_limit=9,
+    effort_limit=24,
     velocity_limit=7.5,
     stiffness={".*": 40.0},
     damping={".*": 5.0},
 )
 
-HFE_ACTUATOR_CFG = DCMotorCfg(
+HFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HFE"],
-    saturation_effort=9,
-    effort_limit=9,
+    effort_limit=24,
     velocity_limit=7.5,
     stiffness={".*": 40.0},
     damping={".*": 5.0},
@@ -38,8 +35,10 @@ HFE_ACTUATOR_CFG = DCMotorCfg(
 
 MISTLETOE_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
+        # usd_path=f"{ISAACLAB_NUCLEUS_DIR}/Robots/ANYbotics/ANYmal-B/anymal_b.usd",        
+
         usd_path= dirname + '/assets/mistletoe_usd/mistletoe.usd',
-        
+
         # Adapted from Anymal Velocity Tracking Example's Config
         activate_contact_sensors=True,
         
@@ -48,8 +47,8 @@ MISTLETOE_CFG = ArticulationCfg(
             retain_accelerations=False,
             linear_damping=0.0,
             angular_damping=0.0,
-            max_linear_velocity=1000.0,
-            max_angular_velocity=1000.0,
+            max_linear_velocity=10.0,
+            max_angular_velocity=10.0,
             max_depenetration_velocity=1.0,
         ),
 
@@ -60,14 +59,15 @@ MISTLETOE_CFG = ArticulationCfg(
 
     ),
     init_state=ArticulationCfg.InitialStateCfg(
-        pos=(0.0, 0.0, 0.6),
+        pos=(0.0, 0.0, 1),
         joint_pos={
             ".*HAA": 0.0,  # all HAA
-            "[12]HFE": 0.4,  # both front HFE
-            "[34]HFE": -0.4,  # both hind HFE
-            "[12]KFE": -0.8,  # both front KFE
-            "[34]KFE": 0.8,  # both hind KFE
+            "LEG_[14]_HFE": 0.523599,  # both front HFE
+            "LEG_[23]_HFE": -0.523599,  # both hind HFE
+            "LEG_[23]_KFE": -0.872665,  # both front KFE
+            "LEG_[14]_KFE": 0.872665,  # both hind KFE
         },
+        joint_vel={".*": 0.0},
     ),
 
     actuators={
@@ -76,5 +76,5 @@ MISTLETOE_CFG = ArticulationCfg(
         "KFE": KFE_ACTUATOR_CFG
     },
 
-    soft_joint_pos_limit_factor=0.95
+    soft_joint_pos_limit_factor=0.5
 )
