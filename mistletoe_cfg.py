@@ -9,26 +9,26 @@ dirname, filename = os.path.split(os.path.abspath(__file__))
 
 HAA_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HAA"],
-    effort_limit=24,
-    velocity_limit=7.5,
-    stiffness={".*": 40.0},
-    damping={".*": 5.0},
+    effort_limit=40,
+    velocity_limit=10,
+    stiffness={".*": 100.0},
+    damping={".*": 10.0},
 )
 
 KFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*KFE"],
-    effort_limit=24,
-    velocity_limit=7.5,
-    stiffness={".*": 40.0},
-    damping={".*": 5.0},
+    effort_limit=40,
+    velocity_limit=10,
+    stiffness={".*": 100.0},
+    damping={".*": 10.0},
 )
 
 HFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HFE"],
-    effort_limit=24,
-    velocity_limit=7.5,
-    stiffness={".*": 40.0},
-    damping={".*": 5.0},
+    effort_limit=40,
+    velocity_limit=10,
+    stiffness={".*": 100.0},
+    damping={".*": 10.0},
 )
 
 #Articulation Configs
@@ -47,19 +47,19 @@ MISTLETOE_CFG = ArticulationCfg(
             retain_accelerations=False,
             linear_damping=0.0,
             angular_damping=0.0,
-            max_linear_velocity=10.0,
-            max_angular_velocity=10.0,
+            max_linear_velocity=1000.0,
+            max_angular_velocity=1000.0,
             max_depenetration_velocity=1.0,
         ),
 
         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
-            enabled_self_collisions=True, solver_position_iteration_count=4, solver_velocity_iteration_count=0
+            enabled_self_collisions=False, solver_position_iteration_count=4, solver_velocity_iteration_count=0
         ),
 
 
     ),
     init_state=ArticulationCfg.InitialStateCfg(
-        pos=(0.0, 0.0, 1),
+        pos=(0.0, 0.0, 0.3),
         joint_pos={
             ".*HAA": 0.0,  # all HAA
             "LEG_[14]_HFE": 0.523599,  # both front HFE
@@ -76,5 +76,5 @@ MISTLETOE_CFG = ArticulationCfg(
         "KFE": KFE_ACTUATOR_CFG
     },
 
-    soft_joint_pos_limit_factor=0.5
+    soft_joint_pos_limit_factor=0.9
 )
