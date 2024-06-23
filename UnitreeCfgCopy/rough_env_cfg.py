@@ -21,8 +21,6 @@ from .mistletoe_cfg import MISTLETOE_CFG
 class MistletoeRewardsCfg(RewardsCfg):
     termination_penalty = RewTerm(func=mdp.is_terminated, weight=-200.0)
 
-
-
 @configclass
 class UnitreeGo1RoughEnvCfg(LocomotionVelocityRoughEnvCfg):
     def __post_init__(self):

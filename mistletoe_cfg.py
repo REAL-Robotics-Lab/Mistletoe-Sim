@@ -9,7 +9,7 @@ dirname, filename = os.path.split(os.path.abspath(__file__))
 
 HAA_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HAA"],
-    effort_limit=40,
+    effort_limit=24,
     velocity_limit=10,
     stiffness={".*": 100.0},
     damping={".*": 10.0},
@@ -17,7 +17,7 @@ HAA_ACTUATOR_CFG = ImplicitActuatorCfg(
 
 KFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*KFE"],
-    effort_limit=40,
+    effort_limit=9,
     velocity_limit=10,
     stiffness={".*": 100.0},
     damping={".*": 10.0},
@@ -25,7 +25,7 @@ KFE_ACTUATOR_CFG = ImplicitActuatorCfg(
 
 HFE_ACTUATOR_CFG = ImplicitActuatorCfg(
     joint_names_expr=[".*HFE"],
-    effort_limit=40,
+    effort_limit=9,
     velocity_limit=10,
     stiffness={".*": 100.0},
     damping={".*": 10.0},
