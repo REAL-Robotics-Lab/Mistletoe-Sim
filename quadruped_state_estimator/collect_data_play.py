@@ -53,17 +53,26 @@ from omni.isaac.lab_tasks.utils.wrappers.rsl_rl import (
 import csv
 import time
 import pandas as pd
+import numpy as np
 
 def write_obs_to_csv(file_name, headers):
-    with open(file_name, mode='a', newline='') as file:
+    with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(headers)  # Write headers once at the beginning
 
 def append_obs_to_csv(file_name, obs):
     with open(file_name, mode='a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(obs)
-
+        writer.writerow(obs.cpu().numpy()[0])
+        print(obs.cpu().numpy()[0])
+    # Count the number of rows in the CSV file
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        num_rows = sum(1 for row in reader)
+    
+    # Print the number of rows in the CSV file
+    print(f"Number of rows in the CSV file: {num_rows}")
+    
 # Example usage
 file_name = 'dataset.csv'
 headers = [
@@ -118,6 +127,9 @@ def main():
 
     # reset environment
     obs, _ = env.get_observations()
+
+    time_steps = 0
+
     # simulate environment
     while simulation_app.is_running():
         # run everything in inference mode
@@ -127,6 +139,9 @@ def main():
             # env stepping
             obs, _, _, _ = env.step(actions)
             append_obs_to_csv(file_name, obs)
+            # time_steps += 1 
+            # print(time_steps)
+
 
     # close the simulator
     env.close()
