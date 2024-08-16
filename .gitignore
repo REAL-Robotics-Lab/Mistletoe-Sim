@@ -3,3 +3,5 @@ assets/mistletoe_urdf/install
 assets/mistletoe_urdf/log
 *.pth
 *.csv
+*.onnx
+*.rknn
