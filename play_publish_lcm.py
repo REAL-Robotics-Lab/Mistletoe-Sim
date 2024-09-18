@@ -57,7 +57,6 @@ import time
 import pandas as pd
 import numpy as np
 import torch.nn as nn
-
 import lcm
 from exlcm import quad_command_t
 import time 
@@ -120,9 +119,21 @@ model.load_state_dict(torch.load(model_path))
 model.eval()
 print(f"Model loaded from {model_path}")
 
+def parse_RL_inference_output(inference_output):
+    # for whatever reason isaaclab scales output by 0.25, and then convert to radians, then convert to format that can be used by us
+    converted_output = ((inference_output[0] * 0.25)/(2*np.pi)).tolist()
+    sorted_output = []
+    for i in range(4):
+        for j in range(12):
+            if j%4==i:
+                sorted_output.append(converted_output[j])
+
+    return sorted_output
+
 def main():
-    lc = lcm.LCM()
+    lc = lcm.LCM("udpm://239.255.76.67:7667?ttl=1")    
     msg = quad_command_t()
+    msg.manual_command = True
 
     """Play with RSL-RL agent."""
     # parse configuration
@@ -164,25 +175,22 @@ def main():
     time_steps = 0
 
     # simulate environment
+    max = 0
     while simulation_app.is_running():
         # run everything in inference mode
         with torch.inference_mode():
             # agent stepping
             actions = policy(obs)
-            msg.position = actions
+            print(parse_RL_inference_output(actions))
+
+            # make sure to convert to revs that is used for the robot.
+            msg.position = (actions[0])
+            # print(actions[0][0].item())
             msg.timestamp = time.time_ns()
             msg.manual_command = True
             # env stepping
             obs, _, _, _ = env.step(actions)
-            append_obs_to_csv(file_name, obs)
-
-            for i in range(len(obs)):
-                obs_per_env = obs[i]
-                obs_without_lin_vel = obs_per_env[-45:]
-                with torch.no_grad():
-                    estimated_lin_vel = model(obs_without_lin_vel.cuda())
-                obs[i] = torch.cat((estimated_lin_vel, obs_without_lin_vel), dim=0)
-            
+            lc.publish("COMMAND", msg.encode())
             # time_steps += 1 
             # print(time_steps)
 
