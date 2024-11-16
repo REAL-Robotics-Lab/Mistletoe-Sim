@@ -8,7 +8,8 @@ import pandas as pd
 class StateEstimator(nn.Module):
     def __init__(self):
         super(StateEstimator, self).__init__()
-        self.layer1 = nn.Linear(45, 256)
+        # 60 - 6 = 54
+        self.layer1 = nn.Linear(42, 256)
         self.layer2 = nn.Linear(256, 128)
         self.output_layer = nn.Linear(128, 3)
         self.relu = nn.ReLU()
@@ -19,13 +20,16 @@ class StateEstimator(nn.Module):
         x = self.output_layer(x)
         return x
 
-# Load dataset from CSV file
 def load_dataset_from_csv(filepath):
     data = pd.read_csv(filepath)
     data = torch.tensor(data.values, dtype=torch.float32)
-    inputs = data[:, 3:]  # The rest of the columns as inputs
-    targets = data[:, :3]  # First 3 columns as targets
+    # Select columns 3 to 8 and 12 onwards for inputs
+    # note: we don't want to include velocity commands since predictions shouldn't really be based on user inputs
+    inputs = torch.cat([data[:, 3:9], data[:, 12:]], dim=1)  
+    # First 3 columns as targets
+    targets = data[:, :3]  
     return inputs, targets
+
 
 # Training function
 def train(model, dataloader, criterion, optimizer, epochs=20):
@@ -58,7 +62,7 @@ if __name__ == "__main__":
     model = StateEstimator()
 
     # Load dataset from CSV
-    filepath = "quadruped_state_estimator/dataset.csv"  # Replace with your CSV file path
+    filepath = "/home/fumi/CodeStuff/IsaacLab/dataset.csv"  # Replace with your CSV file path
     inputs, targets = load_dataset_from_csv(filepath)
 
     # Create TensorDataset
@@ -96,13 +100,6 @@ if __name__ == "__main__":
 
     # Export to ONNX
     onnx_path = "quadruped_state_estimator/state_estimator.onnx"
-    dummy_input = torch.randn(1, 45)  # Create a dummy input tensor with the shape of (1, 45)
+    dummy_input = torch.randn(1, 42)  # Create a dummy input tensor with the shape of (1, 45)
     torch.onnx.export(model, dummy_input, onnx_path, input_names=['input'], output_names=['output'])
     print(f"Model exported to ONNX format at {onnx_path}")
-
-    # Example prediction
-    input_tensor = torch.tensor([-0.24631839,0.18723287,-0.09318641,0.028049123,-0.025900668,-1.0330632,0.46058035,0.2479403,-0.30430126,0.034202546,0.1014897,-0.021568187,0.006815998,-0.00015507918,0.005955586,0.016301272,-0.007733185,0.1165862,-0.11805348,-0.076901406,0.12329475,2.7562032,5.732006,-1.7907379,1.2611842,-0.92328686,1.3570652,2.1867409,0.55202556,4.9861336,-6.368494,-3.5004716,5.1214876,1.0085579,2.206266,-0.30466098,0.07726368,-0.030805215,0.28187332,0.33519456,-0.3987426,2.664197,-2.5022304,-1.811091,2.9067085])  # Single input example
-    input_tensor = input_tensor.unsqueeze(0)  # Add batch dimension
-    with torch.no_grad():
-        output_tensor = model(input_tensor)
-    print(f"Model prediction: {output_tensor}")

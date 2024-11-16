@@ -63,8 +63,8 @@ def write_obs_to_csv(file_name, headers):
 def append_obs_to_csv(file_name, obs):
     with open(file_name, mode='a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(obs.cpu().numpy()[0])
-        print(obs.cpu().numpy()[0])
+        for observation in obs.cpu().numpy():
+            writer.writerow(observation)
     # Count the number of rows in the CSV file
     with open(file_name, mode='r') as file:
         reader = csv.reader(file)
